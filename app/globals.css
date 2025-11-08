@@ -59,3 +59,10 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+/* Custom breakpoint for 1443px - shows 5 columns */
+@media (min-width: 1443px) {
+  .grid-cols-5-custom {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+}

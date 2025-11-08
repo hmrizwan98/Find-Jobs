@@ -4,7 +4,7 @@ import { MarkerIcon, TagIcon, WatchIcon } from "../icons";
 
 const JobCard = () => {
   return (
-    <div className="w-full outline outline-gray-extra-light rounded-[10px] px-5 py-[10px] bg-white max-w-[182px] flex flex-col gap-2.5">
+    <div className="w-full outline outline-gray-extra-light rounded-[10px] px-5 py-[10px] bg-white flex flex-col gap-2.5">
       <div className="flex flex-col gap-[5px]">
         <h3 className="font-semibold text-[10px] text-gray-dark">Promoted</h3>
         <div className="flex gap-[10px]">

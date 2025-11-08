@@ -3,7 +3,7 @@
 import React from "react";
 import { cn } from "../lib/utils";
 
-type Variant = "primary" | "secondary" | "outline";
+type Variant = "primary" | "secondary" | "outline" | "pill";
 type Size = "xs" | "sm" | "md" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -19,12 +19,14 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "items-center justify-center rounded-md font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
+    "items-center justify-center font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
 
   const variantStyles: Record<Variant, string> = {
-    primary: "bg-blue text-white hover:bg-blue/80",
-    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",
-    outline: "border border-gray-300 text-gray-900 hover:bg-gray-100",
+    primary: "bg-blue text-white hover:bg-blue/80 rounded-md",
+    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 rounded-md",
+    outline:
+      "border border-gray-light text-gray-light hover:bg-gray-100 bg-transparent rounded-md",
+    pill: "bg-white border border-gray-extra-light text-gray-dark hover:bg-gray-secondary hover:border-gray-medium rounded-full",
   };
 
   const sizeStyles: Record<Size, string> = {
