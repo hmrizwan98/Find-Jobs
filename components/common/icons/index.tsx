@@ -56,4 +56,67 @@ const TagIcon = ({ width = 12, height = 16, ...props }: IconProps) => (
   </svg>
 );
 
-export { MarkerIcon, TagIcon, WatchIcon };
+const SearchIcon = ({ width = 17, height = 18 }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 17 18"
+  >
+    <path
+      stroke="#737A91"
+      strokeLinecap="round"
+      strokeMiterlimit="10"
+      strokeWidth="1.5"
+      d="m16.25 16.27-2.594-2.593M12.848 6.82a6.048 6.048 0 1 1-1.467-3.97"
+    ></path>
+  </svg>
+);
+
+const NotificationIcon = ({ width = 20, height = 20, ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 20 20"
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M10 2.5a6.25 6.25 0 0 0-6.25 6.25v3.75L2.5 15h15l-1.25-2.5V8.75A6.25 6.25 0 0 0 10 2.5M10 17.5a2.5 2.5 0 0 1-2.5-2.5h5a2.5 2.5 0 0 1-2.5 2.5"
+    />
+  </svg>
+);
+
+const MessageIcon = ({ width = 20, height = 20, ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 20 20"
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M17.5 10a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0M10 5.833v4.167M10 13.333h.008"
+    />
+  </svg>
+);
+
+export {
+  MarkerIcon,
+  MessageIcon,
+  NotificationIcon,
+  SearchIcon,
+  TagIcon,
+  WatchIcon,
+};

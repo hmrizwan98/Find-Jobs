@@ -9,6 +9,8 @@
   --color-gray-light: #737a91;
   --color-gray-extra-light: #e1e1e1;
   --color-gray-secondary: #fafafa;
+  --color-placeholder: #b0b0b0;
+  --color-search-bg: #f6f9ff;
 }
 
 @theme inline {
@@ -23,6 +25,8 @@
   --color-gray-light: #737a91;
   --color-gray-extra-light: #e1e1e1;
   --color-gray-secondary: #fafafa;
+  --color-placeholder: #b0b0b0;
+  --color-search-bg: #f6f9ff;
 }
 
 @media (prefers-color-scheme: dark) {
