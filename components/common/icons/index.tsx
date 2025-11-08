@@ -132,9 +132,72 @@ const ChevronDownIcon = ({ width = 12, height = 12, ...props }: IconProps) => (
   </svg>
 );
 
+const MenuIcon = ({ width = 24, height = 24, ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M4 6h16M4 12h16M4 18h16"
+    />
+  </svg>
+);
+
+const CloseIcon = ({ width = 24, height = 24, ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+);
+
+const FilterIcon = ({ width = 20, height = 20, ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 20 20"
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M2.5 5h15M5 10h10M7.5 15h5"
+    />
+    <circle cx="17.5" cy="5" r="1.5" fill="currentColor" />
+    <circle cx="15" cy="10" r="1.5" fill="currentColor" />
+    <circle cx="12.5" cy="15" r="1.5" fill="currentColor" />
+  </svg>
+);
+
 export {
   ChevronDownIcon,
+  CloseIcon,
+  FilterIcon,
   MarkerIcon,
+  MenuIcon,
   MessageIcon,
   NotificationIcon,
   SearchIcon,

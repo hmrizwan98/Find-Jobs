@@ -18,8 +18,8 @@ const FindJobs = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Main Content Layout */}
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Left Sidebar */}
-          <div className="lg:w-[280px] shrink-0">
+          {/* Left Sidebar - Hidden on Mobile */}
+          <div className="hidden lg:block lg:w-[280px] shrink-0">
             <Sidebar />
           </div>
 
@@ -49,7 +49,19 @@ const FindJobs = () => {
                 title="Featured Jobs"
                 seeAllHref="/jobs/featured"
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-5-custom gap-4 auto-rows-fr">
+              {/* Mobile: Horizontal Slider */}
+              <div className="flex lg:hidden gap-4 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide">
+                {featuredJobs.map((_, index) => (
+                  <div
+                    key={`featured-${index}`}
+                    className="min-w-[280px] shrink-0"
+                  >
+                    <JobCard />
+                  </div>
+                ))}
+              </div>
+              {/* Desktop: Grid */}
+              <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-5-custom gap-4 auto-rows-fr">
                 {featuredJobs.map((_, index) => (
                   <JobCard key={`featured-${index}`} />
                 ))}
@@ -62,7 +74,19 @@ const FindJobs = () => {
                 title="Recommended Jobs"
                 seeAllHref="/jobs/recommended"
               />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-5-custom gap-4 auto-rows-fr">
+              {/* Mobile: Horizontal Slider */}
+              <div className="flex lg:hidden gap-4 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide">
+                {recommendedJobs.map((_, index) => (
+                  <div
+                    key={`recommended-${index}`}
+                    className="min-w-[280px] shrink-0"
+                  >
+                    <JobCard />
+                  </div>
+                ))}
+              </div>
+              {/* Desktop: Grid */}
+              <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-5-custom gap-4 auto-rows-fr">
                 {recommendedJobs.map((_, index) => (
                   <JobCard key={`recommended-${index}`} />
                 ))}
@@ -72,7 +96,8 @@ const FindJobs = () => {
             {/* Latest Jobs Section */}
             <section className="mb-8">
               <SectionHeader title="Latest Jobs" seeAllHref="/jobs/latest" />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-5-custom gap-4 auto-rows-fr">
+              {/* Responsive Grid - 1 column on mobile, grid on larger screens */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-5-custom gap-4 auto-rows-fr">
                 {latestJobs.map((_, index) => (
                   <JobCard key={`latest-${index}`} />
                 ))}

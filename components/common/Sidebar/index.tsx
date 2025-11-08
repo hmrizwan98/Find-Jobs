@@ -16,7 +16,7 @@ const Sidebar = () => {
   return (
     <aside className="w-full lg:w-[280px] grid gap-[10px]">
       {/* Profile Card */}
-      <div className="bg-white rounded-[10px] overflow-hidden relative pt-16 pb-4 px-4 max-w-[346px]">
+      <div className="bg-white rounded-[10px] overflow-hidden relative pt-16 pb-4 px-4 w-full">
         {/* Background Image */}
         <div className="absolute top-0 left-0 right-0 h-24">
           <NextImage
@@ -57,7 +57,7 @@ const Sidebar = () => {
       </div>
 
       {/* Statistics Section */}
-      <div className="bg-white rounded-[10px] p-5">
+      <div className="bg-white rounded-[10px] p-0 lg:p-5">
         {stats.map((stat, index) => (
           <div
             key={stat.label}
@@ -76,7 +76,7 @@ const Sidebar = () => {
       </div>
 
       {/* My Calendar Section */}
-      <div className="bg-white rounded-[10px] p-[10px]">
+      <div className="bg-white rounded-[10px] p-[10px] hidden lg:block">
         <button
           type="button"
           onClick={() => setIsCalendarExpanded(!isCalendarExpanded)}
@@ -99,7 +99,6 @@ const Sidebar = () => {
           />
         </button>
 
-        {/* Expandable Content */}
         {isCalendarExpanded && (
           <div className="mt-4 pt-4 border-t border-gray-extra-light">
             <p className="text-sm text-gray-medium">
