@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-gray-dark: #333333;
+  --color-gray-medium: #585d6e;
+  --color-blue: #0154aa;
+  --color-gray-light: #737a91;
+  --color-gray-extra-light: #e1e1e1;
+  --color-gray-secondary: #fafafa;
 }
 
 @theme inline {
@@ -10,6 +16,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-neue-haas: "Neue Haas Grotesk Display Pro", sans-serif;
+  --color-gray-dark: #333333;
+  --color-gray-medium: #585d6e;
+  --color-blue: #0154aa;
+  --color-gray-light: #737a91;
+  --color-gray-extra-light: #e1e1e1;
+  --color-gray-secondary: #fafafa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +35,21 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-neue-haas);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100% !important;
+  letter-spacing: 0;
+}
+
+.font-neue-haas {
+  font-family: var(--font-neue-haas);
+  font-weight: 500;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
