@@ -10,10 +10,10 @@ const FindJobs = () => {
   // Mock data - replace with actual data fetching
   const featuredJobs = Array(5).fill(null);
   const recommendedJobs = Array(8).fill(null);
-  const latestJobs = Array(8).fill(null);
+  const latestJobs = Array(10).fill(null);
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-main min-h-screen">
       {/* Main Container */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Main Content Layout */}
