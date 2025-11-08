@@ -56,16 +56,17 @@ const TagIcon = ({ width = 12, height = 16, ...props }: IconProps) => (
   </svg>
 );
 
-const SearchIcon = ({ width = 17, height = 18 }: IconProps) => (
+const SearchIcon = ({ width = 17, height = 18, ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
     height={height}
     fill="none"
     viewBox="0 0 17 18"
+    {...props}
   >
     <path
-      stroke="#737A91"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeMiterlimit="10"
       strokeWidth="1.5"
@@ -112,7 +113,27 @@ const MessageIcon = ({ width = 20, height = 20, ...props }: IconProps) => (
   </svg>
 );
 
+const ChevronDownIcon = ({ width = 12, height = 12, ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 12 12"
+    {...props}
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M3 4.5l3 3 3-3"
+    />
+  </svg>
+);
+
 export {
+  ChevronDownIcon,
   MarkerIcon,
   MessageIcon,
   NotificationIcon,

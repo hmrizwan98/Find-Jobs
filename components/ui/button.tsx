@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
     xs: "px-[30px] py-[10px] text-xs",
     sm: "px-3 py-1 text-sm",
     md: "px-5 py-[10px] text-base leading-[100%] tracking-[0%]",
-    lg: "px-6 py-3 text-lg",
+    lg: "px-6 py-[14px] text-lg",
   };
 
   return (

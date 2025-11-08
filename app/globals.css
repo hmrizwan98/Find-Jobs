@@ -11,6 +11,7 @@
   --color-gray-secondary: #fafafa;
   --color-placeholder: #b0b0b0;
   --color-search-bg: #f6f9ff;
+  --color-gray-outline: #e9ecef;
 }
 
 @theme inline {
@@ -27,6 +28,7 @@
   --color-gray-secondary: #fafafa;
   --color-placeholder: #b0b0b0;
   --color-search-bg: #f6f9ff;
+  --color-gray-outline: #e9ecef;
 }
 
 @media (prefers-color-scheme: dark) {

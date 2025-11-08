@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="bg-gray-100 w-full">
       <div className="bg-white border-b border-gray-extra-light shadow-sm">
-        <div className="px-8 py-4 flex items-center gap-8">
+        <div className="px-8 py-4 flex items-center justify-between gap-8">
           {/* Logo */}
           <div className="shrink-0">
             <Link href="/" className="flex items-center">
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex items-center gap-[25px]">
+          <nav className="flex items-center gap-[25px] flex-1">
             {navItems.map((item) => (
               <Link
                 key={item.label}
