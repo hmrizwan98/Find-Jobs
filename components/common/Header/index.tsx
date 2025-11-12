@@ -26,9 +26,9 @@ const Header = () => {
         {/* Desktop Header */}
         <div className="hidden lg:block">
           <div className="max-w-[1440px] mx-auto px-8 py-4">
-            <div className="flex items-center justify-between gap-8">
+            <div className="flex flex-wrap items-center justify-between gap-4 xl:gap-8">
               {/* Logo */}
-              <div className="shrink-0">
+              <div className="shrink-0 order-1 xl:order-none">
                 <Link href="/" className="flex items-center">
                   <div className="flex items-center justify-center">
                     <Image
@@ -42,7 +42,7 @@ const Header = () => {
               </div>
 
               {/* Navigation Links */}
-              <nav className="flex items-center gap-[25px] flex-1 min-w-0">
+              <nav className="flex items-center gap-[25px] flex-1 min-w-0 order-2 w-full justify-center xl:order-none xl:w-auto xl:justify-start">
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
@@ -59,9 +59,9 @@ const Header = () => {
               </nav>
 
               {/* Search, Button, and Avatar */}
-              <div className="flex items-center gap-4 shrink-0">
+              <div className="flex items-center gap-4 order-3 w-full justify-end xl:order-none xl:w-auto">
                 {/* Search Bar */}
-                <div className="flex items-center gap-2.5 w-[261px] h-[39px] px-4 py-[6px] bg-search-bg text-sm text-gray-light rounded-[8px] shrink-0">
+                <div className="flex items-center gap-2.5 w-full max-w-[261px] h-[39px] px-4 py-[6px] bg-search-bg text-sm text-gray-light rounded-[8px]">
                   <SearchIcon
                     width={15.5}
                     height={15.5}
@@ -73,6 +73,7 @@ const Header = () => {
                     className="bg-transparent outline-none flex-1 min-w-0"
                   />
                 </div>
+<div className="flex items-center gap-2.5">
 
                 {/* Resume Builder Button */}
                 <Button variant="primary" size="md" className="shrink-0">
@@ -89,6 +90,7 @@ const Header = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
+</div>
               </div>
             </div>
           </div>
